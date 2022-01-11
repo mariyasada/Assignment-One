@@ -47,7 +47,7 @@ let b = 10;
 console.log(`Fifteen is ${a + b} and not ${2 * a + b}`);
 
 // ex8 // doubt
-let arithmeticsObj = 
+const arithmeticsObj = 
   {
      sum : (num1, num2) => {
       return num1 + num2;
@@ -56,7 +56,8 @@ let arithmeticsObj =
       return num1 * num2;
     }
   };
-  console.log(arithmeticsObj.sum);
+  console.log(arithmeticsObj.sum(3,4)); //7
+  console.log(arithmeticsObj.multiply(3,4)) //12
 
   // ex9
   let avengers = {

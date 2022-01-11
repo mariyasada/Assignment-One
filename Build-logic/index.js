@@ -191,3 +191,35 @@ findDaysInMonth('march');
  findPrime(5);
  //
  //Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
+ const isWeekDayOrWeekend = (enterday) =>{
+     let day = enterday;
+     switch (day) {
+         case "monday":
+              console.log(`${day} is weekday`);
+             break;
+             case "tuesday":
+              console.log(`${day} is weekday`);
+             break;
+             case "wednesday":
+              console.log(`${day} is weekday`);
+             break;
+             case "thursday":
+              console.log(`${day} is weekday`);
+             break;
+             case "friday":
+              console.log(`${day} is weekday`);
+             break;
+             case "saturday":
+              console.log(`${day} is weekned`);
+             break;
+             case "sunday":
+              console.log(`${day} is weekend`);
+             break;
+     
+         default:
+             console.log(`enter valid day`);
+             break;
+     }
+ }
+
+ isWeekDayOrWeekend("tuesday");

@@ -101,10 +101,12 @@ const obj = {
     bhallo : 2
 }
 
-const {c : aloo = [2,3,4].push(5), aloo} = obj 
-
+const {c : aloo = [2,3,4].push(5), aloo} = obj  // first destructuring the c, c:aloo give a alias name to c
+                                                // c =aloo=4 then again we are trying to declare aloo that's why it gives error
 console.log(aloo) ; // identifier aloo has already been declare
-//if it woulb like this
+
+
+//if it would like this
 const obj = {
     aloo : 1,
     bhallo : 2

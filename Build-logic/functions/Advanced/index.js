@@ -27,8 +27,22 @@ toSentenceCase('we are neogrammers');
 
 const sortArray = array => {
   array.sort(function (a,b){
-  return a-b;   // why we use a-b
+  return a-b;   // why we use a-b //doubt
 });
   console.log(array);
 }
 sortArray([100,83,32,9,45,61]);  // [9,32,45,61,83,100]
+
+// Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
+// Example:
+// Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
+
+const reverseCharacterOfWords = str =>{ // got error in this
+   let listOfWords = str.split(' ');
+   
+   listOfWords.map(word => {
+      return word.split(' ').reverse().join(' ');
+   })
+    console.log(word);
+}
+reverseCharacterOfWords('mariya sada');

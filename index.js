@@ -142,9 +142,9 @@ const arithmeticsObj =
   packIt(1,2,3,5,5);
 
   //ES5
-  function packIt(...args)
+  function packIt(a,b,c,d,e)
   {
-      console.log(args);
+      console.log(a,b,c,d,e);
   }
   packIt(1,2,3,5,5);
 

@@ -115,10 +115,39 @@ sumOfDigits('1234'); // 10
 
 // Write a JavaScript program that reverses a number.
 
-const reverseNumber = (num) => {
-    let number = num.toString();
-   let splitNumber = number.split('  ');
-   let reverNumber = splitNumber.reverse();
-   console.log(reverNumber);
+const reversedNumber = (num) => {
+   return Number(num.toString().split('').reverse().join(''));
+
 }
-reverseNumber(1234);
+reversedNumber(12345); // 54321
+
+//Write a Program to cyclically Rotate a Number by X positions in the left direction, as provided by the user.
+// Enter a Number : 1234 // cut the first two numbers and add them to last
+// Enter the Number of Rotations : 2
+// Output : 3412
+
+const rotateNumber = (num,rotatecount) =>{
+     let splitNumber = num.toString().split('');
+    //  console.log(splitNumber);
+     let lastDigits = splitNumber.slice(rotatecount).join('');
+     let firstDigits = splitNumber.slice(0,rotatecount).join('');
+      let rotatedNum = Number(lastDigits + firstDigits);
+     return rotatedNum ;
+}
+rotateNumber(1234,2);  //3412
+
+//Write a Program to convert Decimal to Binary.
+const decToBin = num => {
+    let binaryNumber = Number(num.toString(2));
+    return binaryNumber;
+}
+decToBin(10);
+
+// Write a Program to Convert Octal to Decimal.
+const octalToDec = num =>{
+    let decimalNumber = parseInt(num,8); // parseInt parses a string and returns integer for base 
+                                            // in ParseInt redix range between 2 to 36 => not including 2 and 36
+                                            // If you entered 2 and 36 it gives output as NaN.
+    return decimalNumber;
+}
+octalToDec(116); //78

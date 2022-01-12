@@ -1,4 +1,12 @@
- // example 1 coverting var into let
+ // example 1 coverting var into let 
+ /*var aloo = 1;
+if (aloo == 1) {
+   var a = 2;
+   console.log(a);
+}
+console.log(aloo);*/
+// solution
+
  let aloo = 1;
 if (aloo == 1) {
    let a = 2;
@@ -12,6 +20,16 @@ const multiply = (x, y) => {
   };
 
   //example 3 
+  /*var customer = {
+  name: "Bhaalo"
+};
+var card = {
+  amount: 20,
+  product: "Aaalo",
+  unitprice: 50
+};
+var message = "Hello " + customer.name + " wants to buy " + card.amount + " " + card.product + " for price of " + card.unitprice + " per piece"*/
+
   let customer = {
     name: "Bhaalo"
   };
@@ -20,12 +38,16 @@ const multiply = (x, y) => {
     product: "Aaalo",
     unitprice: 50
   };
-  let message = `Hello ${customer.name} wants to buy ${card.amount}  ${card.product} for price of ${card.unitprice} per piece`;
+
+  const {name} = customer;
+  const {amount,product,unitprice} = card; // object distructuring
+  let message = `Hello ${name} wants to buy ${amount}  ${product} for price of ${unitprice} per piece`;
 
   //exercise 4
-  let Neog = ["Tanvi", "Swap", "Tanay", "MA", "CA", "PA", "TA"];
-    const CEO = Neog[0];
-   const Mentor = Neog[2];
+  /*var Neog = ["Tanvi", "Swap", "Tanay", "MA", "CA", "PA", "TA"],
+        CEO = Neog[0],
+      Mentor = Neog[2];*/
+  const [CEO, , Mentor] = ["Tanvi", "Swap", "Tanay", "MA", "CA", "PA", "TA"];  // array destructuring
    console.log(CEO , Mentor);
 
    //ex 5

@@ -51,24 +51,43 @@ var message = "Hello " + customer.name + " wants to buy " + card.amount + " " + 
    console.log(CEO , Mentor);
 
    //ex 5
-let arr = ["MA", "TA", "PA", "CA"];
-let firstName = arr[0];
-let surname = arr[1];
+   /* var arr = ["MA", "TA", "PA", "CA"];
+        var firstName = arr[0],
+        var surname = arr[1];
+        console.log(firstName);
+        console.log(surname);*/
+const [firstName, surname] = ["MA", "TA", "PA", "CA"];
 console.log(firstName, surname);
 
 // ex6 
+        /*var Aaloo = "Tasty";
+        var Bhaloo = "Cute";
+        var Obj = {
+          Aaloo: Aaloo,
+          Bhaloo: Bhaloo
+        };*/
 let Aaloo = "Tasty";
 let Bhaloo = "Cute";
-const Obj = {
-  Aaloo: Aaloo,
-  Bhaloo: Bhaloo
-};
+const Obj = {Aaloo,Bhaloo};  // object destructuring
+console.log(Obj);
+
 // ex7
+              /*var a = 5;
+              var b = 10;
+              console.log("Fifteen is ".concat(a + b, " and n0t ").concat(2 * a + b, "."));*/
 let a = 5;
 let b = 10;
 console.log(`Fifteen is ${a + b} and not ${2 * a + b}`);
 
-// ex8 // doubt
+// ex8 // 
+        /*var arithmeticsObj = {
+          sum: function sum(num1, num2) {
+            return num1 + num2;
+          },
+          multiply: function multiply(num1, num2) {
+            return num1 * num2;
+          }
+        };*/
 const arithmeticsObj = 
   {
      sum : (num1, num2) => {
@@ -82,7 +101,7 @@ const arithmeticsObj =
   console.log(arithmeticsObj.multiply(3,4)) //12
 
   // ex9
-  let avengers = {
+  /*var avengers = {
     operation: "Assemble",
     members: [
       {
@@ -96,8 +115,25 @@ const arithmeticsObj =
       }
     ]
   };
-  let operation = avengers.operation;
-   let  members = avengers.members;
+  var operation = avengers.operation,
+   var  members = avengers.members;*/
+
+   //solution
+   const {operation,members}={
+    operation: "Assemble",
+    members: [
+      {
+        ironMan: "Tony Stark"
+      },
+      {
+        captainAmerica: "Steve Rogers"
+      },
+      {
+        blackWidow: "Natasha Romanoff"
+      }
+    ]
+  };
+  console.log(operation,members);
 
     //ex10
     // convert Es6 to Es5
@@ -106,11 +142,12 @@ const arithmeticsObj =
   packIt(1,2,3,5,5);
 
   //ES5
-  function packIt(a,b,s,d,e)
+  function packIt(...args)
   {
-      console.log(a,b,s,d,e);
+      console.log(args);
   }
   packIt(1,2,3,5,5);
+
 // guess the output
 const hello = () => "Hello"
 const welcome = () => "Welcome"
@@ -130,11 +167,11 @@ console.log(aloo) ; // identifier aloo has already been declare
 
 //if it would like this
 const obj = {
-    aloo : 1,
+    aaloo : 1,
     bhallo : 2
 }
 
-const {c : aaloo = [2,3,4].push(5), aloo} = obj 
+const {c : aloo = [2,3,4].push(5), aaloo} = obj 
 
-console.log(aaloo) ;  // 4
-console.log(aaloo,aloo) // 4 1
+console.log(aloo) ;  // 4
+console.log(aloo,aaloo) // 4 1

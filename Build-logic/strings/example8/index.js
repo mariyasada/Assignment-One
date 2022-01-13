@@ -96,3 +96,30 @@ const makeFirstLetterCapital = str =>{
 
 }
 makeFirstLetterCapital("tic tac toe is a fun game");
+
+// advance Given an input string S and two characters c1 and c2, you need to replace every occurrence of character c1 with character c2 in the given string
+
+const replaceCharacter = (str,c1,c2)=>{
+    let replaceString = str.replaceAll(c1,c2);
+    return replaceString;
+}
+replaceCharacter('mariyasadaaaa','a','g'); //mgriygsgdgggg'
+
+// Write a program to toggle case of each character of the string "good afternoon" (example: "neogcamp" ⇒ "nEoGcAmP" )
+// not able to solve
+const toggleCharacter = str =>{
+    for(let i=0; i< str.length;i++)
+    {
+        if (str[i]%2 !==0)
+        {
+            let toogleChar = str[i].toUpperCase();
+            // return toogleChar;
+        }
+        // let completeString = str[i] + toogleChar;
+        // console.log(completeString);
+        return toogleChar;
+    }
+    let completeString = str[i] + toogleChar;
+        console.log(completeString);
+}
+toggleCharacter("neogcamp");

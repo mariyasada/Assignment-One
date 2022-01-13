@@ -61,4 +61,38 @@ else{
 }
 checkPalindromeForAlphanumeric('na5aan');
 
-//
+// example 12 not able to solve
+// ex 13 not able to solve // tried by using setTime  method but got stuck
+
+// ex 14
+// Write a program that masks all but last four characters of the string "5565534276455423" to '#'
+
+const maskFourCharacter = str =>{
+    let cutFirstToLastString = str.slice(0,-4); // 556553427645 except last four digits
+    // console.log(cutFirstToLastString);
+    let cutLastFourDigits = str.slice(-4); //5423
+    // console.log(cutLastFourDigits);
+    let makeMaskToString = '#'.repeat(cutFirstToLastString.length);
+    // console.log(makeMaskToString);
+    let maskCompleteString = makeMaskToString.concat(cutLastFourDigits);
+    console.log(maskCompleteString);
+}
+maskFourCharacter('5565534276455423456');
+
+//Given a string "tic tac toe is a fun game" convert the first 6 characters to capital case
+const makeFirstLetterCapital = str =>{
+     let splitString = str.split(' ');
+     for (let i=0; i< splitString.length;i++)
+     {
+         let MakeCapital = splitString[i].slice(0,1).toUpperCase() + splitString[i].slice(1);
+         console.log(MakeCapital);
+        //  let makeSmall = splitString[i].slice(1);
+        //  //console.log(makeSmall);
+        //  let makeFirstLetterCapitalString = (MakeCapital.concat(makeSmall));
+        //  console.log(makeFirstLetterCapitalString );
+     }
+    //  return MakeCapital;
+    
+
+}
+makeFirstLetterCapital("tic tac toe is a fun game");

@@ -29,6 +29,67 @@ const convertStringToNumber = str =>{
 convertStringToNumber('1234');
 
 // Write a program to delete all vowels from a string. Assume string is not more than 80 characters long
-const deleteVowels = str =>{
+const deleteVowels = str => {
+    let stringAfterVowels = str.replace(/[aeiou]/gi,' ');
+    return stringAfterVowels;
+}
+deleteVowels("mariyasaada");
+
+//Write a program to check whether the string is alphanumeric or not , eg:batman@45 contains digit 45
+const checkAlphanumeric = str =>{
+    let regEx =/[0-9]/gi;
+    if(str.match(regEx))
+    {
+        console.log(`${str} is alphanumeric`);
+        return str.match(regEx);
+    }
+    else{
+        console.log(`${str} is  not alphanumeric`);
+    }
     
 }
+checkAlphanumeric('batman@45');
+checkAlphanumeric('mariyasada');
+
+//A program that reads three strings and prints the longest and smallest one
+
+const checkTheLongestAndSmallestString = (str1,str2,str3)=>{
+
+    checkLongest(str1,str2,str3);
+    checkSmallest(str1,str2,str3);
+   
+   }
+   const checkLongest = (str1,str2,str3)=>{
+   if(str1.length <= str2.length) {
+   
+       if(str2.length  <= str3.length)
+       {
+           console.log(`longest string is ${str3}`);}
+           
+       else{
+            console.log(`longest string is ${str2} `);
+           }
+   }
+   else{
+       console.log(`longest string is ${str1} `);
+   }
+   }
+   const checkSmallest = (str1,str2,str3)=>{
+       if(str1.length >= str2.length) {
+         console.log(str1.length,str2.length);
+       
+           if(str2.length  >= str3.length)
+           { console.log(str3.length);
+               console.log(`smallest string is ${str3}`);}
+               
+           else{
+                console.log(`smallest string is ${str2} `);
+               }
+       }
+       else{
+           console.log(`smallest string is ${str1} `);
+       }
+       }
+   checkTheLongestAndSmallestString("saniyapatel",'mariya',"sadmara");
+
+   //

@@ -93,7 +93,7 @@ findSumOfTwoArray([3,5,2,9,4,3],[6,2,8,1,3,7]);
 
 const findVowelsandConsonant = str =>{
     let vowels=['a','e','i','o','u'];
-    //let pattern ='^[a-zA-Z]/gi';
+    //let pattern ='/[^aeiou]/gi';
     let countVowels =0;
     let countConsonant=0;
     for(let i=0;i<str.length;i++)
@@ -103,9 +103,9 @@ const findVowelsandConsonant = str =>{
             countVowels++;
             countConsonant=0;
         }
-        else countConsonant++;
-        //  if(str.match(pattern)) // not able to remove duplicate characters
-        //   countConsonant++;
+         else countConsonant++;
+         // else if(str.match(pattern)) // not able to remove duplicate characters
+           countConsonant++;
     }
     console.log(`vowels are ${countVowels} and consonant are ${countConsonant}`)
 
@@ -114,3 +114,14 @@ findVowelsandConsonant('veryGoodMorning');
 
 //Shift an array by X to right.
 //Example [1,2,3,4,5] after shifting to right [5,1,2,3,4]
+
+const shiftArray = arr =>{
+    let lastElement = arr.pop();
+    console.log(lastElement);
+    let shiftedArray = arr.unshift(lastElement);
+    console.log(shiftedArray); // gives the length of array like what push operatioon gave
+    return arr; // that's why we return whole arr.
+}
+shiftArray([1,2,3,4,5]);
+
+//Advance

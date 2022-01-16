@@ -13,4 +13,19 @@
   {
      background-color: yellow; /*(0,0,0,3); */
   }
- 
+ .section
+ {
+     width:500px;
+     font-size: 150%;
+     background-color: blue;
+ }
+ p{
+     width:250px;
+     background-color: pink;
+     font-size: 2em;
+ }
+ .title
+ {
+     width: 2em;
+
+ }

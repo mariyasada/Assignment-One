@@ -1,0 +1,16 @@
+/* #btn-large.btn {  // (0,1,1,0)
+    background-color: green;  
+  }  */
+ nav button#btn-large
+  {
+    background-color: red; /*(0,1,0,2) */
+  }
+   main nav.btn  /* (0,0,1,2)*/
+  {
+    background-color: blue;
+  } 
+  nav main button
+  {
+     background-color: yellow; /*(0,0,0,3); */
+  }
+ 
